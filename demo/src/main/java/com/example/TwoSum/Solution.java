@@ -10,17 +10,23 @@ public class Solution {
     // You may assume that each input would have exactly one solution, and you may
     // not use the same element twice.
 
-        int nums[] = { 2, 7, 11, 15 };
-
-        int targetNum = 9;
+    public static int[] twoSumSearch(int[] array, int targetSum) {
 
         HashMap<Integer, Integer> twoSumSearch = new HashMap<>();
 
-        for(
-        int x = 0;nums.length>x;x++)
-        {
+        for (int x = 0; array.length > x; x++) {
 
         }
 
+        return null;
+
     }
+
+    public static void main(String[] args) {
+        int array[] = { 2, 7, 11, 15 };
+
+        int targetNum = 9;
+
+    }
+
 }
