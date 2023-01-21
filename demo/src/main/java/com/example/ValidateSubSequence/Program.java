@@ -1,4 +1,4 @@
-package com.ValidateSubSequence;
+package com.example.ValidateSubSequence;
 
 import java.util.*;
 
