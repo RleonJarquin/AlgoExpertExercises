@@ -36,7 +36,7 @@ class Program {
 
         }
 
-        return new ArrayList<Integer[]>();
+        return triplets;
     }
 
     public static void main(String[] args) {
