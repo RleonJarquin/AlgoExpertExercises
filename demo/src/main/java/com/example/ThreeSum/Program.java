@@ -30,7 +30,7 @@ class Program {
                 }
                 // If totalSum is greater than target decrement right
                 else if (totalSum > targetSum) {
-                    right++;
+                    right--;
                 }
             }
 
@@ -44,6 +44,7 @@ class Program {
         expected.add(new Integer[] { -8, 2, 6 });
         expected.add(new Integer[] { -8, 3, 5 });
         expected.add(new Integer[] { -6, 1, 5 });
-        List<Integer[]> output = Program.threeNumberSum(new int[] { 12, 3, 1, 2, -6, 5, -8, 6 }, 0);
+        //List<Integer[]> output = Program.threeNumberSum(new int[] { 12, 3, 1, 2, -6, 5, -8, 6 }, 0);
+        System.out.println(threeNumberSum(new int[] { 12, 3, 1, 2, -6, 5, -8, 6 }, 0));
     }
 }
