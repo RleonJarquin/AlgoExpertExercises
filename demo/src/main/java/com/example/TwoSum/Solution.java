@@ -14,21 +14,24 @@ public class Solution {
 
     public static int[] twoSumSearch(int[] array, int targetSum) {
 
-        HashMap<Integer, Integer> twoSumSearch = new HashMap<>();
+        HashMap<Integer, Integer> twoSumMap = new HashMap<>();
 
-        // Check if the y is in the hashmap otherwise put in the hashmap.
+        // Check if the y is in the hashmap key values otherwise put in the hashmap.
         // If it is return the array with both values
 
         int[] twoSumArray;
 
-        for (int x = 0; array.length > x; x++) {
-            int y = 10 - array[x];
-            if (twoSumSearch.keySet().contains(y)) {
-                twoSumArray = new int[] { array[x], y };
+        for (int idx = 0; array.length > idx; idx++) {
+            int x = array[idx];
+            int y = targetSum - x;
+            // If the value in the array of x is in the keyset then you found a compatible pair
+            if (twoSumMap.keySet().contains(x)) {
+                // Given that the value is x is in the key set search it in the hashmap
+                twoSumArray = new int[] { twoSumMap.get(x), x};
                 return twoSumArray;
             }
             else{
-                twoSumSearch.put(y,array[x]);
+                twoSumMap.put(y,x);
             }
 
         }
@@ -38,11 +41,13 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        int array[] = { 2, 7, 11, 15 };
+        int array[] = { 3, 5, -4, 8, 11, 1, -1, 6};
 
-        int targetNum = 9;
+        int targetNum = 10;
 
-        
+        System.out.print(twoSumSearch(array, targetNum));
+
+
 
     }
 
