@@ -21,7 +21,7 @@ public class longestPeak {
                 
                 // If the right Index is less than or equal to the max elem and the current element is less than the left element 
                 // Increment towards the right
-                while (rightIdx <= array.length && array[rightIdx] < array[rightIdx - 1]) {
+                while (rightIdx < array.length && array[rightIdx] < array[rightIdx - 1]) {
                     rightIdx += 1;
                 }
 
